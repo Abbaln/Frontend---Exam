@@ -1,0 +1,345 @@
+  {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    display: flex;
+    margin: 1rem;
+    padding: 3rem;
+    scrollbar-width: none;
+    border-radius: 10px;
+  }
+  
+  .maincolumn {
+    display: flex;
+    float: left;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  aside {
+    flex: 0 0 200px;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 8px;
+    background-color: #870101;
+  }
+  
+  .tabell {
+    border: 1px solid #222;
+    border-radius: 8px;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #222;
+    color: navajowhite;
+    margin: 0.5rem;
+  }
+  
+  .kategory {
+    font-size: 14px;
+    padding: 10px 15px;
+    background-color: #222;
+    flex: 1;
+  }
+  
+  .kategoryliga {
+    font-weight: 700;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: navajowhite;
+  }
+  
+  .kategoryland {
+    font-weight: 700;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: navajowhite;
+  }
+  
+  .match {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px;
+    background-color: darkred;
+    border-radius: 15.5px;
+    margin: 10px;
+  }
+  
+  .boll {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+  
+  .hemmalag,
+  .bortalag {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 5px;
+    letter-spacing: 0.41px;
+  }
+  
+  .hemmalagnamn,
+  .bortalagnamn {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: navajowhite;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 300px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  
+  
+  .headerf1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--accent);
+    border-bottom: 1px solid #444;
+    flex-flow: column;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .bild {
+    color: transparent;
+    display: flex;
+    margin-right: 10px;
+  }
+  
+  
+  @media (max-width: 1024px) {
+    nav {
+      padding: 0 50px;
+    }
+  
+    .menu {
+      justify-content: center;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .match {
+      font-size: 12px;
+      padding: 8px;
+      margin: 8px;
+    }
+  
+    .boll {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hemmalag img,
+    .bortalag img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    nav {
+      padding: 0;
+      justify-content: flex-start;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+  
+    a {
+      margin: 5px;
+      padding: 8px;
+    }
+  
+    header {
+      flex-direction: column;
+    }
+  
+    .menu {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav {
+      padding: 0;
+      justify-content: flex-start;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+  
+    a {
+      flex: 0 0 auto;
+      margin: 5px;
+      padding: 7px;
+    }
+  
+    .match {
+      font-size: 12px;
+      padding: 6px;
+    }
+  
+    .hemmalag img,
+    .bortalag img {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .kategory,
+    .tabell {
+      font-size: 12px;
+      padding: 5px;
+    }
+  
+    .kategoryliga {
+      font-size: 16px;
+    }
+  
+    .hemmalagnamn,
+    .bortalagnamn {
+      font-size: 12px;
+    }
+  
+    header {
+      flex-direction: column;
+      padding: 10px 5px;
+    }
+  
+    .menu h1 {
+      font-size: 1.5em;
+    }
+  
+    .menu {
+      padding: 10px;
+    }
+  }
+  
+  
+  /* Sidomenyn */
+  
+  /* Sidomenyn */
+  .sidebar {
+    position: relative;
+    flex: 0 0 200px;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 8px;
+    background-color: #870101;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: navajowhite;
+    border-radius: 3px;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      flex: none;
+      width: 100%;
+      margin: 0 0 10px 0;
+      padding: 5px;
+      background-color: transparent;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .tabell {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 5px;
+      z-index: 10;
+      width: 180px;
+      margin: 0;
+      padding: 15px;
+      background-color: #222;
+      border: 1px solid #630808;
+      border-radius: 8px;
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tabell.active {
+      display: block;
+    }
+  
+    .tabell h4 {
+      margin: 12px 0;
+    }
+  }
+  
+  
+  /* Mobil */
+  @media (max-width: 768px) {
+    .sidebar {
+      padding: 10px;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .tabell {
+      display: none;
+      position: absolute;
+      top: 55px;
+      left: 10px;
+      z-index: 10;
+      width: 180px;
+      padding: 15px;
+      box-sizing: border-box;
+      background-color: var(--secondaryLight);
+      border-radius: 10px;
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .tabell.active {
+      display: block;
+    }
+  
+    .tabell h4 {
+      margin: 12px 0;
+    }
+  }
+  
